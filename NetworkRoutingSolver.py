@@ -134,7 +134,7 @@ class NetworkRoutingSolver:
                 if e[0] == curr_node:
                     curr_length = e[1]
                     break
-                    
+
             total_length += curr_length
             path_edges.append((self.network.nodes[curr_node].loc, self.network.nodes[next_node].loc,
                              '{:.0f}'.format(curr_length)))
@@ -169,7 +169,7 @@ class NetworkRoutingSolver:
         else:
             queue = arraypq()
 
-        self.results = dijkstra(queue, edges, srcIndex)
+        self.results = dijkstra(queue, self.edges, srcIndex)
 
         t2 = time.time()
 
